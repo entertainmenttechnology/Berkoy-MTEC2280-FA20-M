@@ -22,21 +22,12 @@ void setup() {
 
 void draw() {
   background(0);
-  if (scene!=3){  //if scene does not = 3
-    expand=0;  //reset value of expand
-  }
   if (scene==1) {
-    ellipse(width/2, height/2, 100, 100);
+    scene1();
   } else if (scene==2) {
-    ellipse(width/2, height/2, 10, 10);
+    scene2();
   } else if (scene==3) {
-    //spiral animation
-    translate(width/2, height/2);  
-    for (float i=0; i<200; i++) {
-      rotate(0.1);
-      ellipse(i+expand, 0+expand, 10, 10);
-    }
-    expand+=0.2;
+    scene3();
   }
   println(scene);
 }
@@ -49,6 +40,25 @@ void keyPressed() {
   } else if (key== '2') {
     scene=2;
   } else if (key=='3') {
+    expand=0; //reset variable 
     scene=3;
   }
+}
+
+void scene1(){
+  ellipse(width/2, height/2, 100, 100);
+}
+
+void scene2(){
+  ellipse(width/2, height/2, 10, 10);
+}
+
+void scene3(){
+    //spiral animation
+    translate(width/2, height/2);  
+    for (float i=0; i<200; i++) {
+      rotate(0.1);
+      ellipse(i+expand, 0+expand, 10, 10);
+    }
+    expand+=0.2;
 }
