@@ -18,6 +18,6 @@ void loop() {
 
   /////////Uncomment Serial.print() OR Serial.write() and not both!//////////////
   
-  //Serial. println(val); //to send human-readable data to Arduino monitor
-  Serial.write(val);  //to send binary data to Processing
+  Serial. println(val); //to send human-readable data to Arduino monitor
+  //Serial.write(val);  //to send binary data to Processing
 }

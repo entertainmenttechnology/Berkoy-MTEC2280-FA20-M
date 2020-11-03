@@ -32,5 +32,5 @@ void draw() {
   background(255);
   fill (0);
   ellipse (width/2, height/2, val, val);
-  println (val); //prints to Processing console
+  //println (val); //prints to Processing console
 }
