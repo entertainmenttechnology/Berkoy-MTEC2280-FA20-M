@@ -1,17 +1,20 @@
 /*
 EXAMPLE 10-6 Object-oriented timer
 
-from Learning Processing by Dan Shiffman
+Adapted from Learning Processing by Dan Shiffman
 
  */
 
 Timer timer;
+Timer timer2;
 
 void setup() {
   size(200, 200);
   background(0);
   timer = new Timer(5000);
+  timer2= new Timer(10000);
   timer.start();
+  timer2.start();
 }
 
 
@@ -19,6 +22,9 @@ void draw() {
   if (timer.isFinished()) {
     background(random(255));
     timer.start();
+  }
+  if (timer2.isFinished()){
+    ellipse (width/2, height/2, 50, 50);
   }
 }
 
